@@ -454,7 +454,7 @@ h6 {
 /* Sections Header
 --------------------------------*/
 
-.section-header h3 {
+.section-header h2 {
   font-size: 36px;
   color: #283d50;
   text-align: center;
@@ -1856,8 +1856,9 @@ h6 {
 
   }
 
-  .Banner-Intro h2{
+  .Banner-Intro h1{
     font-size: 2.5rem;
+    font-weight: 800;
   }
   
 
@@ -1925,8 +1926,9 @@ h6 {
     padding-bottom: 150px;
    }
 
-   .Banner-Intro h2{
+   .Banner-Intro h1{
     font-size: 2rem;
+    font-weight: 800;
     }
 
 
@@ -1990,8 +1992,9 @@ h6 {
     display: none;
   }
 
-   .Banner-Intro h2{
+   .Banner-Intro h1{
     font-size: 3rem;
+    font-weight: 800;
   }
 
   .banner-info{
