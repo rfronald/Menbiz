@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Menbiz</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/icono.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<style>
+#accordion .panel{
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    margin-bottom: 15px;
+}
+#accordion .panel-heading{
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+}
+#accordion .panel-title a{
+    display: block;
+    padding: 12px 15px;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    color: #f81ac1;
+    /*border: 1px solid #ececec;*/
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    position: relative;
+    transition: all 0.5s ease 0s;
+    box-shadow: 0 1px 2px rgba(43,59,93,0.30);
+}
+#accordion .panel-title a.collapsed{
+    box-shadow: none;
+    color: #676767;
+    box-shadow: 0 1px 2px rgba(43,59,93,0.30);
+}
+#accordion .panel-title a:before,
+#accordion .panel-title a.collapsed:before{
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    width: 25px;
+    height: 25px;
+    line-height: 28px;
+    font-size: 15px;
+    font-weight: 900;
+    color: #f81ac1;
+    text-align: center;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    transform: rotate(135deg);
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed:before{
+    color: #676767;
+    transform: rotate(0);
+}
+#accordion .panel-title a:after{
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #ececec;
+    position: absolute;
+    top: 0;
+    right: 55px;
+}
+#accordion .panel-body{
+    padding: 0px 15px;
+    border: none;
+    font-size: 15px;
+    color: #615f5f;
+    line-height: 27px;
+}
+
+
+/******************* Accordion Demo - 2 *****************/
+#accordion2 .panel-title a{
+    display: block;
+    padding: 12px 15px 12px 50px;
+    background: linear-gradient(to bottom, #fefefe, #cdcdcd);
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #676767;
+    text-shadow: 1px 1px 1px #fff;
+    position: relative;
+}
+#accordion2 .panel-title a:before{
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    background: #929191;
+    font-size: 12px;
+    font-weight: 900;
+    color: #fdfbfb;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    text-shadow: none;
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+#accordion2 .panel-title a.collapsed:before{ content: "\f067"; }
+#accordion2 .panel-body{
+    padding: 0px 15px;
+    font-size: 15px;
+    color: #222;
+    line-height: 27px;
+    border: none;
+}
+#accordion2 .panel-body p{ margin-bottom: 0; }
+
+/******************* Accordion Demo - 3 *****************/
+#accordion3{
+    padding-left: 80px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#accordion3:before{
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: #004e89;
+    position: absolute;
+    top: 0;
+    left: 22px;
+    z-index: -1;
+}
+#accordion3 .panel-title a{
+    display: block;
+    padding: 10px 30px 15px 0;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    color: #004e89;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    box-shadow: 0 1px 2px rgba(43,59,93,0.30);
+}
+#accordion3 .panel-title a:before{
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #cad5c2;
+    text-align: center;
+    font-size: 17px;
+    color: #004e89;
+    border: 6px solid #004e89;
+    position: absolute;
+    top: 0;
+    left: -80px;
+}
+#accordion3 .panel-title a.collapsed:before{
+    content: "\f067";
+    background: #fff;
+}
+#accordion3 .panel-body{
+    padding: 0px 15px;
+    background: #eee;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) inset, 0 1px 2px rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    color: #487677;
+    line-height: 25px;
+}
+
+/******************* Accordion Demo - 4 *****************/
+#accordion4 .panel{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+#accordion4 .panel-heading{
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    
+}
+#accordion4 .panel-heading:before,
+#accordion4 .panel-heading:after{
+    content: "";
+    width: 50%;
+    height: 20%;
+    box-shadow: 0 15px 5px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+#accordion4 .panel-heading:after{
+    left: auto;
+    right: 10px;
+    transform: rotate(3deg);
+}
+h4.panel-title{margin:10px 0px !important;}
+#accordion4 .panel-title a{
+    display: block;
+    padding: 15px 70px 15px 70px;
+    margin: 0;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #d11149;
+    border-radius: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+}
+#accordion4 .panel-title a:before,
+#accordion4 .panel-title a.collapsed:before{
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 55px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    border-left: 2px solid #D11149;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#accordion4 .panel-title a.collapsed:before{ content: "\f107"; }
+#accordion4 .panel-title a .icon{
+    display: inline-block;
+    width: 55px;
+    height: 100%;
+    border-right: 2px solid #d11149;
+    font-size: 20px;
+    color: rgba(0,0,0,0.7);
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#accordion4 .panel-body{
+    padding: 10px 15px;
+    margin: 0 0 20px;
+    border-bottom: 3px solid #d11149;
+    border-top: none;
+    background: #fff;
+    font-size: 15px;
+    color: #333;
+    line-height: 27px;
+}
+
+/******************* Accordion Demo - 5 *****************/
+#accordion5 .panel{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 20px 0;
+}
+#accordion5 .panel-title a{
+    display: block;
+    /* padding: 10px 20px 10px 60px; */
+    padding: 10px 10px 10px 25px;
+    background: #18499a;
+    border-radius: 30px;
+    border: 2px solid #18499a;
+    font-size: 1.2rem;
+    font-weight:400;
+    color: #fff;
+    position: relative;
+    margin: 20px 0;
+}
+#accordion5 .panel-title a.collapsed{
+    border: 2px solid #0072aa;
+    background: #fff;
+    color: #283d50;
+}
+#accordion5 .panel-title a:before,
+#accordion5 .panel-title a.collapsed:before{
+    content: "\f068";
+    font-family: "FontAwesome";
+    font-weight: 900;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: #18499a;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border-right: 3px solid #fff;
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+#accordion5 .panel-title a.collapsed:before{
+    content: "\f067";
+    background: #0072aa;
+    border: none;
+}
+#accordion5 .panel-body{
+    padding: 10px 15px 0;
+    margin: 0 0 0 30px;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+    position: relative;
+}
+#accordion5 .panel-body:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 90%;
+    background: #18499a;
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+#accordion5 .panel-body:after{
+    content: "";
+    border-top: 20px solid #18499a;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: -48px;
+}
+
+</style>
+<body  >
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href="index.html" class="logo"><img src="img/Menbiz3.svg" alt="" class=""></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Inicio</a></li>
+          <li><a href="#about">Beneficios</a></li>
+          <li><a href="#MenbizPermite">Casos de Uso</a></li>
+          <li><a href="#MenbizFunciona">¿Cómo funciona?</a></li>
+          <li><a href="#team">FAQ</a></li>
+          
+          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#contact">Login</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+
+  <section class="Banner-Intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6  banner-info wow fadeInLeft " >
+          <h2>
+            Actualiza tú plan de Marketing con Menbiz
+          </h2>
+          <br>
+          <div class=" banner-info-botones">
+            <a href="#about" class="btn-get-started scrollto">Comprar Ahora</a>
+            <a href="#about" class="btn-services scrollto">Beneficios</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="banner-img wow fadeIn">
+              <img src="img/intro2.png" alt="">
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <main id="main">
+
+
+    <section class="info-Menbiz">
+
+        <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6 info-text-menbiz">
+                <h2 class="info-titulo " >¿Qué es 
+                  <br><span>Menbiz?</span>
+                </h2>
+                <br>
+                <p class="lista-info wow fadeInUp">
+                  <span><i class="fa fa-check" aria-hidden="true"></i> </span>
+                  <b>Menbiz</b> permite gestionar de manera más eficiente la comunicación con los clientes vía WhatsApp.
+                </p>
+
+                <p class="lista-info wow fadeInUp">
+                  <span><i class="fa fa-check" aria-hidden="true"></i> </span>
+                  Creada para empresas que desean mejorar sus procesos de atención y ventas en el área de mensajería. 
+                </p>
+
+              </div>
+              <div class="col-12 col-lg-6">
+
+                <div class="img-info wow fadeInUp">
+                  <img src="img/menbiz-info.png" alt="">
+                </div>
+
+              </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>BENEFICIOS</h3>
+          <p>
+            Administre de manera más eficiente su mensajería con <B>Menbiz</B>, contamos con una interfaz amigable y de fácil manejo. Constantemente agregamos nuevas funciones para cumplir los requerimientos de nuestros clientes.
+          </p>
+        </header>
+
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+          
+            <div class="icon-box wow fadeInUp">
+              <div class="icon"><i class="fa fa-bolt"></i></div>
+              <h4 class="title"><a href="">Super Rápido</a></h4>
+              <p class="description">En segundos Envía ofertas y promociones con imágenes y videos, Automatiza tus procesos de forma eficaz. Ahorra tiempo y dinero</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-send"></i></div>
+              <h4 class="title"><a href="">Ahorra tiempo y recursos</a></h4>
+              <p class="description">Ahorra tiempo en el envió de mensajes y mantén a tus equipos enfocados en las tareas comerciales.</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Estadísticas</a></h4>
+              <p class="description">Obtenga estadísticas detalladas de sus campañas. Sepa cuántos mensajes fueron enviados, entregados, fallados ...</p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+            <img src="img/beneficios1.png" class="img-fluid" alt="" style="max-width: 80%; height: auto; margin-top: -20px;">
+          </div>
+        </div>
+
+        <div class="row about-container">
+          <div class="col-lg-6 background order-lg-1 order-1 wow fadeInUp">
+            <img src="img/beneficios2.png" class="img-fluid" alt="" style="max-width: 80%; height: auto; margin-top: -20px;">
+          </div>
+          <div class="col-lg-6 content order-lg-2 order-2">
+          
+            <div class="icon-box wow fadeInUp">
+              <div class="icon"><i class="fa fa-bolt"></i></div>
+              <h4 class="title"><a href="">Control Total</a></h4>
+              <p class="description">Utiliza tus propios números de WhatsApp, mantén registro de todas las conversaciones y la trazabilidad de los mismos</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-send"></i></div>
+              <h4 class="title"><a href="">Medios de comunicación ricos</a></h4>
+              <p class="description">Enriquezca sus mensajes con imágenes, audio, video y archivos y muestre una experiencia de cliente más atractiva.</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Personalización</a></h4>
+              <p class="description">Crea mensajes personalizados masivos, hasta 10 variables por mensaje.</p>
+            </div>
+
+          </div>
+
+        
+        </div>
+
+
+
+      </div>
+    </section><!-- #about -->
+
+
+
+
+    <section class="MenbizPermite" id="MenbizPermite">
+
+      <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2>¿Qué permite realizar Menbiz?</h2>
+              <p>Envía todo tipo de mensajes </p>
+            </div>
+            <div class="col-12 col-lg-7  container-card-permite">
+
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso2.svg" alt=""></span>
+                <p>Atención al Cliente</p>
+              </div>
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso3.svg" alt=""></span>
+                <p>Promociones</p>
+              </div>
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso4.svg" alt=""></span>
+                <p>Reservas</p>
+              </div>
+
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso5.svg" alt=""></span>
+                <p>Recordatorios</p>
+              </div>
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso6.svg" alt=""></span>
+                <p>Autorizaciones</p>
+              </div>
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso7.svg" alt=""></span>
+                <p>Cotizaciones</p>
+              </div>
+
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso8.svg" alt=""></span>
+                <p>Soporte</p>
+              </div>
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso10.svg" alt=""></span>
+                <p>Invitaciones</p>
+              </div>
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso9.svg" alt=""></span>
+                <p>Citas</p>
+              </div>
+
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso11.svg" alt=""></span>
+                <p>Códigos Únicos</p>
+              </div>
+
+              <div class="card-permite">
+                <span> <img src="img/iconos/Recurso12.svg" alt=""></span>
+                <p>Facturas </p>
+              </div>
+
+            </div>
+            <div class="col-12 col-lg-5" >
+              <div class="permite-img wow fadeInRight">
+                <img src="img/LaptopMenbiz1.png" alt="">
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </section>
+
+
+    <section class="MenbizFunciona" id="MenbizFunciona">
+
+        <div class="container">
+            <div class="banner-funciona">
+                <img class="circulo1" src="img/iconos/circulo1.svg" alt="">
+                <img class="circulo2" src="img/iconos/circulo2.svg" alt="">
+                <img class="circulo3" src="img/iconos/circulo3.svg" alt="">
+                <img class="circulo4" src="img/iconos/circulo4.svg" alt="">
+                <img class="circulo5" src="img/iconos/circulo5.svg" alt="">
+              <div class="row">
+                <div class="col-12 text-center ">
+                  <h2>¿Cómo Funciona?</h2>
+                </div>
+                
+                <div class="col-12 ">
+  
+                  <div class="container-grafico-funcion">
+                    <div class="forma-funcion-1 wow fadeInUp">
+                      <div class="num-funciona-1">1</div>
+                      <p>Cree perfil empresarial</p>
+                    </div>
+                    <div class="forma-funcion-2 wow fadeInUp">
+                      <div class="num-funciona-2 ">2</div>
+                      <p>Sincronice</p>
+                    </div>
+                    <div class="forma-funcion-3 wow fadeInUp">
+                      <div class="num-funciona-3">3</div>
+                      <p>Cree y envié Mensaje</p>
+                    </div>
+                    <div class="forma-funcion-4 wow fadeInUp">
+                      <div class="num-funciona-4">4</div>
+                      <p>Verifique</p>
+                    </div>
+                  </div>
+  
+                </div>
+  
+              </div>
+            </div>
+        </div>
+
+    </section>
+
+ 
+    <section id="team">
+        <div class="container">
+        <div class="container mt-10">
+            <header class="section-header">
+                <h3 class="section-title">Preguntas Frecuentes</h3>
+                <br>
+              </header>
+            <center>
+            <div class="col-12 col-md-9 " >
+                <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true" >
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo5">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo01" aria-expanded="false" aria-controls="collapseTwo5">
+                              ¿Qué es Menbiz?
+                          </a>
+                         </h4>
+                    </div>
+                    <div id="collapseTwo01" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo5">
+                        <div class="panel-body">
+                            <p>Menbiz es una solución en la nube para enviar mensajes automatizados de WhatsApp a través de la web. Una de las ventajas más relevantes de Mercury es que le permite usar WhatsApp y WhatsApp Web en múltiples dispositivos con un solo número de cuenta.</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo5">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo02" aria-expanded="false" aria-controls="collapseTwo5">
+                                ¿Menbiz es un producto Oficial?
+                            </a>
+                           </h4>
+                      </div>
+                      <div id="collapseTwo02" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo5">
+                          <div class="panel-body">
+                              <p>No, Menbiz es un servicio de ejecución independiente que no está respaldado ni relacionado con WhatsApp y Facebook.</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo5">
+                            <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo03" aria-expanded="false" aria-controls="collapseTwo5">
+                                ¿Cuántos mensajes puedo enviar?
+                              </a>
+                             </h4>
+                        </div>
+                        <div id="collapseTwo03" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo5">
+                            <div class="panel-body">
+                                <p>
+                                  Al día usted puede enviar un máximo de 2,000 mensajes tipo multimedia o texto y máximo 60,000 al mes, si desea mayor volumen necesita adquirir cuentas adicionales. Hay descuentos por volúmenes desde 5.
+                              
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingTwo5">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo04" aria-expanded="false" aria-controls="collapseTwo5">
+                                  ¿Puedo usar mi número de WhatsApp Actual?
+                                </a>
+                               </h4>
+                          </div>
+                          <div id="collapseTwo04" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo5">
+                              <div class="panel-body">
+                                  <p>Si, el envío se realiza vinculando tu número móvil. Simplemente necesitas acceso a Internet y podrás enviar todos los WhatsApp sin costos adicionales. 
+                                
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                      <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingTwo5">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo05" aria-expanded="false" aria-controls="collapseTwo5">
+                                  ¿Qué información tengo de los mensajes enviados?
+                                </a>
+                               </h4>
+                          </div>
+                          <div id="collapseTwo05" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo5">
+                              <div class="panel-body">
+                                  <p>
+                                    Puede ver los mensajes enviados, leídos, en espera y otros. Además, que siempre puede responder directamente desde su celular.
+                                  </p>
+                              </div>
+                          </div>
+                        </div>
+                </div>    
+            </div>
+            </center>
+            </div>
+        </div>
+        
+       
+    </section><!-- #team -->
+
+   
+    <section id="why-us" class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="container" id="contact">
+          <header class="section-header">
+            <h3>Contacto</h3>
+            <p>Solicite una prueba y demostración gratuita por 2 días.</p>
+          </header>
+  
+          <div class="row row-eq-height justify-content-center">
+  
+            <div class="col-lg-4 mb-4">
+              
+              <a href="mailto:info.whabiz@gmail.com" class="card wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                  <span>      <i class="fa fa-envelope"></i> </span>
+                <div class="card-body">
+                  <h5 class="card-title">info.whabiz@gmail.com</h5>
+                  </div>
+                </a>
+           
+            </div>
+  
+            <div class="col-lg-4 mb-4">
+              <a  href="https://api.whatsapp.com/send?phone=51946281558&text=Hola, necesito mas información sobre WhaBiz" class="card wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                <span><i class="fa fa-whatsapp"></i></span>  
+                <div class="card-body">
+                  <h5 class="card-title">+51946281558</h5>
+                  </div>
+                </a>
+            </div>
+  
+            <div class="col-lg-4 mb-4">
+              <a href="tel:+51946281558" class="card wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                 <span><i class="fa fa-phone"></i></span> 
+                <div class="card-body">
+                  <h5 class="card-title">946281558</h5>
+                  
+                </div>
+              </a>
+            </div>
+  
+          </div>
+  
+       
+        </div>
+    </section>
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Menbiz</strong>. todos los derechos reservados @2019
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+        -->
+        un producto de <a href="https://simplex-erp.com/">www.Simplex-ERP.com</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
