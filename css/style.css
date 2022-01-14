@@ -699,8 +699,8 @@ h6 {
 }
 
 #why-us .card:hover {
-  background: #003b7a;
-  border-color: #003b7a;
+  background: #1282ba;
+
 }
 
 #why-us .card i {
@@ -710,7 +710,7 @@ h6 {
 }
 
 #why-us .card h5 {
-  font-size: 22px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -2045,6 +2045,9 @@ div.t-serv:nth-child(1)::after{
     grid-template-columns: 300px repeat(4,190px);
     width: 1080px;
   }
+  .t-title:nth-child(3)::before{
+    left: 5px;
+  }
 
 
 }
@@ -2201,6 +2204,11 @@ div.t-serv:nth-child(1)::after{
     grid-template-columns: 300px repeat(4,190px);
     width: 1080px;
   }
+  .t-title:nth-child(3)::before{
+    left: 5px;
+  }
+
+
 /* Estilos para tabla de planes  */
 
   .back-to-top {
@@ -2277,6 +2285,11 @@ div.t-serv:nth-child(1)::after{
     grid-template-columns: 300px repeat(4,190px);
     width: 1080px;
   }
+
+  .t-title:nth-child(3)::before{
+    left: 5px;
+  }
+
 /* Estilos para tabla de planes  */
 
 
