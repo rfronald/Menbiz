@@ -1836,21 +1836,28 @@ h6 {
 } */
 
 
-/* Estilos tabla */
+/* Estilos para tabla de planes  */
 
+.t-button{
+  background: #18499a;
+  color: #fff;
+  width: 100px;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-size: 0.9rem;
+  /* float: right; */
+}
 
+.t-button:hover{
+  color: #fff;
+  background: #3895f8;
+}
 
 .t-header{
-
 
   display: grid;
   grid-template-columns: 1fr repeat(4,190px);
   grid-auto-rows: auto;
-  margin: 5px 0 5px 0;
-  /* padding: 5px; */
-  /* background: #FCFCFC; */
-
-
   position: relative;
 }
 
@@ -1862,7 +1869,6 @@ h6 {
   left: 0;
   width: 100%;
   height: 110%;
-  /* background: #efefef; */
 
   z-index: -3;
   border-radius: 10px 10px 0 0;
@@ -1872,7 +1878,6 @@ h6 {
   display: grid;
   grid-template-columns: 1fr repeat(4,190px);
   grid-auto-rows: auto;
-  margin: 0 5px 5px 5px;
   padding: 5px;
   position: relative;
 
@@ -1884,18 +1889,15 @@ h6 {
   position: absolute;
   width: 100%;
   height: 100%;
-    background: #18499a;
- /* background: rgb(24,73,154);
-  background: linear-gradient(157deg, rgba(24,73,154,1) 0%, rgba(0,114,170,1) 50%, rgba(118,203,236,1) 100%); */
+  background: #18499a;
   z-index: -1;
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .t-serv, .t-check, .t-title{
     padding: 20px 10px;
     display: flex;
 }
-
 
 
 .t-check{
@@ -1907,21 +1909,26 @@ h6 {
   position: relative;
 }
 
-
 .t-check::after{
   content: '';
   display: block;
   width: 100%;
-  /* background: red; */
   border-bottom: 1px solid rgba(0,0,0,.125);
-
   position: absolute;
   left: 0;
   top: 0;
 
 }
 
+div.t-check:nth-child(2)::after,div.t-check:nth-child(3)::after,
+div.t-check:nth-child(4)::after, div.t-check:nth-child(5)::after{
+  border-style: none !important;
+}
 
+.t-check.active{
+  background: #18499a;
+  color: #fff !important;
+}
 
 .t-serv{
   justify-content: flex-start;
@@ -1948,11 +1955,26 @@ div.t-serv:nth-child(1)::after{
   border-style: none;
 }
 
-
 .t-title{
   flex-direction: column;
   text-align: flex-start;
-  /* background: blue; */
+  position: relative;
+}
+
+.t-title:nth-child(3){
+  color: #fff;
+}
+
+.t-title:nth-child(3)::before{
+    content: '';
+    width: 100%;
+    height: 110%;
+    background: #18499a;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    z-index: -1;
+    border-radius: 10px 10px 0 0;
 }
 
 .t-header .title{
@@ -2010,12 +2032,13 @@ div.t-serv:nth-child(1)::after{
   border-bottom-right-radius: 10px;
 }
 
+/* Estilos para tabla de planes  */
 
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
 
-
+/* Estilos para tabla de planes  */
 @media (max-width: 1024px){
 
   .t-header, .t-row{
@@ -2025,7 +2048,7 @@ div.t-serv:nth-child(1)::after{
 
 
 }
-
+/* Estilos para tabla de planes  */
 
 
 
@@ -2173,10 +2196,12 @@ div.t-serv:nth-child(1)::after{
 
 @media (max-width: 768px) {
 
+  /* Estilos para tabla de planes  */
   .t-header, .t-row{
     grid-template-columns: 300px repeat(4,190px);
     width: 1080px;
   }
+/* Estilos para tabla de planes  */
 
   .back-to-top {
     bottom: 15px;
@@ -2246,11 +2271,13 @@ div.t-serv:nth-child(1)::after{
     padding: 100px 0 20px 0;
   }
 
+  /* Estilos para tabla de planes  */
+
   .t-header, .t-row{
     grid-template-columns: 300px repeat(4,190px);
     width: 1080px;
   }
-
+/* Estilos para tabla de planes  */
 
 
   .Banner-Intro{
