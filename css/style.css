@@ -201,6 +201,7 @@ h6 {
 }
 
 .btn-get-started,
+.btn-get-tabla,
 .btn-services {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -214,7 +215,7 @@ h6 {
   color: #fff  !important;
 }
 
-.btn-get-started {
+.btn-get-started,.btn-get-tabla {
   background: #007bff;
   border: 2px solid #007bff;
   color: #fff;
@@ -235,6 +236,8 @@ h6 {
   border-color: #007bff;
   color: #fff;
 }
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1833,9 +1836,195 @@ h6 {
 } */
 
 
+/* Estilos tabla */
+
+
+
+.t-header{
+
+
+  display: grid;
+  grid-template-columns: 1fr repeat(4,190px);
+  grid-auto-rows: auto;
+  margin: 5px 0 5px 0;
+  /* padding: 5px; */
+  /* background: #FCFCFC; */
+
+
+  position: relative;
+}
+
+.t-header::before{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  /* background: #efefef; */
+
+  z-index: -3;
+  border-radius: 10px 10px 0 0;
+}
+
+.t-row{
+  display: grid;
+  grid-template-columns: 1fr repeat(4,190px);
+  grid-auto-rows: auto;
+  margin: 0 5px 5px 5px;
+  padding: 5px;
+  position: relative;
+
+}
+
+.t-row::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+    background: #18499a;
+ /* background: rgb(24,73,154);
+  background: linear-gradient(157deg, rgba(24,73,154,1) 0%, rgba(0,114,170,1) 50%, rgba(118,203,236,1) 100%); */
+  z-index: -1;
+    border-radius: 10px;
+}
+
+.t-serv, .t-check, .t-title{
+    padding: 20px 10px;
+    display: flex;
+}
+
+
+
+.t-check{
+  justify-content: center;
+  color: #18499a;
+  background: #fff;
+  align-items: center;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+
+.t-check::after{
+  content: '';
+  display: block;
+  width: 100%;
+  /* background: red; */
+  border-bottom: 1px solid rgba(0,0,0,.125);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+
+
+.t-serv{
+  justify-content: flex-start;
+  color: #fff;
+  align-items: center;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+
+.t-serv::after{
+  content: '';
+  display: block;
+  width: 90%;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+
+  position: absolute;
+  left: 10px;
+  top: 0;
+
+}
+
+div.t-serv:nth-child(1)::after{
+  border-style: none;
+}
+
+
+.t-title{
+  flex-direction: column;
+  text-align: flex-start;
+  /* background: blue; */
+}
+
+.t-header .title{
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.t-header .price{
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.t-header .info{
+  margin: 0;
+  font-size: 0.8rem;
+  color: #7b7b7b;
+}
+
+.t-reunion{
+  background: #FCFCFC;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  border-radius: 10px;
+  padding: 5px 0;
+  -webkit-box-shadow: 19px 23px 22px -5px rgba(0,0,0,0.1); 
+  box-shadow: 19px 23px 22px -5px rgba(0,0,0,0.1);
+}
+
+.t-reunion .t-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.t-reunion div img{
+  width: 80px;
+}
+
+.t-b1{
+ border-top-left-radius: 10px;
+}
+
+.t-b2{
+  border-top-right-radius: 10px;
+}
+
+.t-b3{
+  border-bottom-left-radius: 10px;
+}
+
+.t-b4{
+  border-bottom-right-radius: 10px;
+}
+
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
+
+
+@media (max-width: 1024px){
+
+  .t-header, .t-row{
+    grid-template-columns: 300px repeat(4,190px);
+    width: 1080px;
+  }
+
+
+}
 
 
 
@@ -1884,7 +2073,12 @@ h6 {
   
 }
 
+
+
 @media (max-width: 991px) {
+
+
+
   #header {
     height: 60px;
     padding: 10px 0;
@@ -1978,6 +2172,12 @@ h6 {
 }
 
 @media (max-width: 768px) {
+
+  .t-header, .t-row{
+    grid-template-columns: 300px repeat(4,190px);
+    width: 1080px;
+  }
+
   .back-to-top {
     bottom: 15px;
   }
@@ -2036,6 +2236,8 @@ h6 {
     display: none;
   }
 
+  
+
 
 }
 
@@ -2043,6 +2245,12 @@ h6 {
   #intro {
     padding: 100px 0 20px 0;
   }
+
+  .t-header, .t-row{
+    grid-template-columns: 300px repeat(4,190px);
+    width: 1080px;
+  }
+
 
 
   .Banner-Intro{
